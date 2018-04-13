@@ -10,4 +10,8 @@ app.router.get('/', function () {
   this.res.json({ 'hello': 'world' })
 });
 
+app.router.get('/example', function () {
+	this.res.end('hello world')
+});
+
 app.start(3000);
