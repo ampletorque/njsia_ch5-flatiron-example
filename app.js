@@ -14,4 +14,10 @@ app.router.get('/example', function () {
 	this.res.end('hello world')
 });
 
+app.router.get('/also', function () {
+	this.req.on('data', (chunk) => {
+		console.log(chunk);
+	})
+});
+
 app.start(3000);
